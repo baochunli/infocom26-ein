@@ -1,0 +1,32 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main # or 'master' or whatever your default branch is
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # If you had a build step (e.g., npm run build), it would go here.
+      # For a pure static site with index.html at the root, we just deploy that.
+
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          netlify deploy \
+            --dir=. \
+            --site=$NETLIFY_SITE_ID \
+            --prod \
+            --message "GitHub Actions deploy from ${GITHUB_SHA}"
