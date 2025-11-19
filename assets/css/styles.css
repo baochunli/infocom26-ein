@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+    --bg: #f9fafb;
+    --bg-elevated: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-soft: #eff6ff;
+    --border-subtle: rgba(15, 23, 42, 0.06);
+    --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+    --radius-lg: 18px;
+    --link-color: #0b7d35; /* rich forest green */
+    --link-hover-color: #075b27; /* deeper shade on hover */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family:
+        "Inter",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header & navigation */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    background-color: rgba(249, 250, 251, 0.92);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+}
+
+.site-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #111827;
+    white-space: nowrap;
+}
+
+.site-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #111827;
+    white-space: nowrap;
+    text-decoration: none; /* remove underline for the title */
+}
+
+.site-title:hover,
+.site-title:focus-visible {
+    text-decoration: none; /* keep it off on hover/focus too */
+    color: #111827; /* optional: don’t change color */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.15rem;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), #4f46e5);
+    transform: scaleX(0);
+    transform-origin: center;
+    opacity: 0;
+    transition:
+        transform 160ms ease-out,
+        opacity 160ms ease-out;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: #111827;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link--active::after {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+.nav-link--active {
+    color: #111827;
+}
+
+/* Mobile nav toggle */
+
+.nav-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    padding: 0.4rem;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.nav-toggle-box {
+    width: 1.25rem;
+    height: 1.25rem;
+    position: relative;
+}
+
+.nav-toggle-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    border-radius: 999px;
+    background: #111827;
+    transform-origin: center;
+    transition:
+        transform 200ms ease,
+        opacity 200ms ease,
+        top 200ms ease,
+        bottom 200ms ease;
+}
+
+.nav-toggle-line:nth-child(1) {
+    top: 0.2rem;
+}
+
+.nav-toggle-line:nth-child(2) {
+    top: 0.6rem;
+}
+
+.nav-toggle-line:nth-child(3) {
+    bottom: 0.2rem;
+}
+
+.nav.is-open .nav-toggle-line:nth-child(1) {
+    top: 0.6rem;
+    transform: rotate(45deg);
+}
+
+.nav.is-open .nav-toggle-line:nth-child(2) {
+    opacity: 0;
+}
+
+.nav.is-open .nav-toggle-line:nth-child(3) {
+    bottom: 0.6rem;
+    transform: rotate(-45deg);
+}
+
+/* Page layout */
+
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2.75rem 1.5rem 3.5rem;
+}
+
+/* small label above the page title, in normal case */
+.page-kicker {
+    font-size: 0.9rem;
+    /* removed text-transform: uppercase; */
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.85rem;
+}
+
+.page-title {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+    margin: 0;
+}
+
+.page-subtitle {
+    max-width: 40rem;
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: var(--muted);
+}
+
+/* Sections */
+
+.page-section {
+    margin-bottom: 2.5rem;
+    padding: 1.7rem 1.9rem;
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-elevated);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+.section-title {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    /* removed text-transform: uppercase; */
+    letter-spacing: 0.03em;
+    color: #4b5563;
+}
+
+/* Sections: no bordered card by default */
+.page-section {
+    margin-bottom: 2.5rem;
+    padding: 0; /* no inner padding from the card */
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    line-height: 1.5;
+}
+
+/* Keep the hero as a single soft card at the top */
+.page-hero {
+    margin-bottom: 2.75rem;
+    padding: 1.7rem 1.9rem;
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-elevated);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+/* Soft gradient overlay for the hero card */
+.page-section--soft {
+    background: radial-gradient(
+        circle at top left,
+        var(--accent-soft),
+        #ffffff
+    );
+}
+
+.page-section p:last-child {
+    margin-bottom: 0;
+}
+
+.page-section ul {
+    margin: 0.6rem 0 0.4rem 1.1rem;
+    padding: 0;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.page-section li + li {
+    margin-top: 0.35rem;
+}
+
+.highlight {
+    font-weight: 600;
+}
+
+/* Dates */
+
+.date-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+    gap: 0.4rem 1.5rem;
+    font-size: 0.98rem;
+}
+
+.date-grid dt {
+    font-weight: 500;
+}
+
+.date-grid dd {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* Committees */
+
+.committee-role {
+    font-weight: 600;
+    margin-top: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.page-section .committee-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    list-style: none;
+}
+
+.page-section .committee-list li {
+    margin-bottom: 0.3rem;
+}
+
+.committee-affiliation {
+    color: var(--muted);
+}
+
+/* Links */
+
+a {
+    color: var(--link-color);
+    text-decoration-color: rgba(22, 53, 91, 0.5); /* subtle underline if used */
+    text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover-color);
+}
+
+a:focus-visible {
+    text-decoration-thickness: 2px;
+}
+
+/* Subtle animations */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-hero,
+.page-section {
+    animation: fadeInUp 360ms ease-out both;
+}
+
+.page-section:nth-of-type(2) {
+    animation-delay: 80ms;
+}
+.page-section:nth-of-type(3) {
+    animation-delay: 140ms;
+}
+.page-section:nth-of-type(4) {
+    animation-delay: 200ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        scroll-behavior: auto;
+        transition: none;
+    }
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 720px) {
+    .nav {
+        align-items: center;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        margin: 0;
+        padding: 0.35rem 1.35rem 0.85rem;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(249, 250, 251, 0.98);
+        border-bottom: 1px solid var(--border-subtle);
+        transform-origin: top;
+        transform: scaleY(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition:
+            opacity 160ms ease-out,
+            transform 160ms ease-out;
+    }
+
+    .nav.is-open .nav-links {
+        opacity: 1;
+        transform: scaleY(1);
+        pointer-events: auto;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .page {
+        padding-top: 2.25rem;
+    }
+
+    .page-section {
+        padding: 1.3rem 1.35rem;
+    }
+
+    .date-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer */
+
+.site-footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2.4rem;
+    line-height: 1.5;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
