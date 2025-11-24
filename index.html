@@ -1,160 +1,199 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>INFOCOM 2026 Workshop on Embodied Intelligence Networks (EIN)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="INFOCOM 2026 Workshop on Embodied Intelligence Networks (EIN): networking for embodied and agentic intelligence in virtual and physical environments."
+        />
 
-<head>
-    <meta charset="utf-8" />
-    <title>INFOCOM 2026 Workshop on Embodied Intelligence Networks (EIN)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description"
-        content="INFOCOM 2026 Workshop on Embodied Intelligence Networks (EIN): networking for embodied and agentic intelligence in virtual and physical environments." />
+        <!-- Inter via Google Fonts -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        />
 
-    <!-- Inter via Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+    </head>
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
+    <body>
+        <header class="site-header">
+            <nav class="nav" data-nav>
+                <a href="index.html" class="site-title">
+                    INFOCOM 2026 · EIN <span>workshop</span>
+                </a>
 
-<body>
-    <header class="site-header">
-        <nav class="nav" data-nav>
-            <a href="index.html" class="site-title">
-                INFOCOM 2026 · EIN <span>workshop</span>
-            </a>
-
-            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
-                data-nav-toggle>
-                <span class="nav-toggle-box" aria-hidden="true">
-                    <span class="nav-toggle-line"></span>
-                    <span class="nav-toggle-line"></span>
-                    <span class="nav-toggle-line"></span>
-                </span>
-            </button>
-
-            <div class="nav-links">
-                <a href="index.html" class="nav-link nav-link--active">Home</a>
-                <a href="cfp.html" class="nav-link">Call for Papers</a>
-                <a href="committee.html" class="nav-link">Organizing Committee</a>
-                <button class="theme-toggle" type="button" title="Toggle dark mode" aria-label="Toggle dark mode">
-                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
+                <button
+                    class="nav-toggle"
+                    type="button"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    data-nav-toggle
+                >
+                    <span class="nav-toggle-box" aria-hidden="true">
+                        <span class="nav-toggle-line"></span>
+                        <span class="nav-toggle-line"></span>
+                        <span class="nav-toggle-line"></span>
+                    </span>
                 </button>
-            </div>
-        </nav>
-    </header>
 
-    <main class="page">
-        <section class="page-hero page-section page-section--soft">
-            <div class="page-kicker">Workshop at IEEE INFOCOM 2026</div>
-            <h1 class="page-title">Embodied Intelligence Networks (EIN)</h1>
-            <p class="page-subtitle">
-                A half-day workshop on networking for embodied and agentic intelligence,
-                bringing together researchers working on perception, reasoning, and action
-                across virtual and physical environments.
-            </p>
-        </section>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link nav-link--active">Home</a>
+                    <a
+                        href="assets/images/ein26-flyer.pdf"
+                        class="nav-link"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        At a Glance
+                    </a>
+                    <a href="cfp.html" class="nav-link">Call for Papers</a>
+                    <a href="committee.html" class="nav-link">Organizing Committee</a>
+                    <button
+                        class="theme-toggle"
+                        type="button"
+                        title="Toggle dark mode"
+                        aria-label="Toggle dark mode"
+                    >
+                        <svg
+                            class="icon-moon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg
+                            class="icon-sun"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                        >
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
 
-        <section class="page-section">
-            <h2 class="section-title">Overview</h2>
-            <p>
-                AI, as Andrej Karpathy referred to in
-                <a href="https://x.com/karpathy/status/1744179910347039080?s=20">his tweet last January</a>
-                as <span class="highlight">“IA (intelligence amplification)”</span>, is more
-                than just independent long-running agents. It increasingly has the vibe of tools
-                for thought, needing human interaction. Karpathy’s vision has quickly become a
-                reality of Embodied Intelligence, where autonomous agents are increasingly
-                moving from virtual environments into the physical world, interacting with
-                humans, encompassing physical entities such as collaborative robots, smart
-                glasses, and industrial IoT sensors. These autonomous agents are capable of
-                real-time perception of their surroundings, and can take actions—but both their
-                perception and their decisions critically depend on an efficient, low-latency,
-                highly dependable, and adaptive network infrastructure.
-            </p>
-            <p>
-                In both virtual and physical environments, with the ubiquity of tool use (e.g.,
-                via the Model Context Protocol), the ways how autonomous agents interact and
-                network with one another will inevitably evolve beyond traditional data
-                transport and connectivity, and become an
-                <span class="highlight">embodied intelligence network</span> with agentic
-                workflows. Such a network resembles an intelligent mesh consisting of actors
-                that communicate with each other by message passing, running agents who are
-                capable of perceiving and adapting to the environment, understanding human
-                intent, coordinating multi-agent activities, and providing semantic
-                communication with real-time control loops.
-            </p>
-            <p>
-                This new workshop aims to focus squarely on exciting ideas in the emerging topic
-                of agentic computing, as well as how networking can adapt to the needs of
-                agentic computing, in both virtual and phyiscal environments. We encourage
-                submissions of forward-looking research, novel system designs, and practical
-                deployment experiences that deeply integrate networking with embodied
-                perception, reasoning, and action. Papers with open-source artifacts &mdash;
-                including source code and datasets &mdash; are especially welcome and strongly
-                encouraged. The freshness of visionary an forward-looking ideas is more
-                important than the completeness of theoretical proofs, and simplicity may not be
-                inferior to complexity.
-            </p>
-        </section>
+        <main class="page">
+            <section class="page-hero page-section page-section--soft">
+                <div class="page-kicker">Workshop at IEEE INFOCOM 2026</div>
+                <h1 class="page-title">Embodied Intelligence Networks (EIN)</h1>
+                <p class="page-subtitle">
+                    A half-day workshop on networking for embodied and agentic intelligence,
+                    bringing together researchers working on perception, reasoning, and action
+                    across virtual and physical environments.
+                </p>
+            </section>
 
-        <section class="page-section">
-            <h2 class="section-title">Important Dates</h2>
-            <dl class="date-grid">
-                <dt>Submission deadline</dt>
-                <dd>December 29, 2025</dd>
+            <section class="page-section">
+                <img
+                    src="assets/images/ein26-tokyo.jpg"
+                    alt="EIN 2026 Tokyo Skyline"
+                    class="page-image"
+                />
 
-                <dt>Notification of acceptance</dt>
-                <dd>February 2, 2026</dd>
+                <h2 class="section-title">Overview</h2>
+                <p>
+                    AI, as Andrej Karpathy referred to in
+                    <a href="https://x.com/karpathy/status/1744179910347039080?s=20"
+                        >his tweet last January</a
+                    >
+                    as <span class="highlight">“IA (intelligence amplification)”</span>, is more
+                    than just independent long-running agents. It increasingly has the vibe of tools
+                    for thought, needing human interaction. Karpathy’s vision has quickly become a
+                    reality of Embodied Intelligence, where autonomous agents are increasingly
+                    moving from virtual environments into the physical world, interacting with
+                    humans, encompassing physical entities such as collaborative robots, smart
+                    glasses, and industrial IoT sensors. These autonomous agents are capable of
+                    real-time perception of their surroundings, and can take actions—but both their
+                    perception and their decisions critically depend on an efficient, low-latency,
+                    highly dependable, and adaptive network infrastructure.
+                </p>
+                <p>
+                    In both virtual and physical environments, with the ubiquity of tool use (e.g.,
+                    via the Model Context Protocol), the ways how autonomous agents interact and
+                    network with one another will inevitably evolve beyond traditional data
+                    transport and connectivity, and become an
+                    <span class="highlight">embodied intelligence network</span> with agentic
+                    workflows. Such a network resembles an intelligent mesh consisting of actors
+                    that communicate with each other by message passing, running agents who are
+                    capable of perceiving and adapting to the environment, understanding human
+                    intent, coordinating multi-agent activities, and providing semantic
+                    communication with real-time control loops.
+                </p>
+                <p>
+                    This new workshop aims to focus squarely on exciting ideas in the emerging topic
+                    of agentic computing, as well as how networking can adapt to the needs of
+                    agentic computing, in both virtual and phyiscal environments. We encourage
+                    submissions of forward-looking research, novel system designs, and practical
+                    deployment experiences that deeply integrate networking with embodied
+                    perception, reasoning, and action. Papers with open-source artifacts &mdash;
+                    including source code and datasets &mdash; are especially welcome and strongly
+                    encouraged. The freshness of visionary an forward-looking ideas is more
+                    important than the completeness of theoretical proofs, and simplicity may not be
+                    inferior to complexity.
+                </p>
+            </section>
 
-                <dt>Camera-ready manuscript due</dt>
-                <dd>February 16, 2026</dd>
+            <section class="page-section">
+                <h2 class="section-title">Important Dates</h2>
+                <dl class="date-grid">
+                    <dt>Submission deadline</dt>
+                    <dd>December 29, 2025</dd>
 
-                <dt>Workshop Date</dt>
-                <dd>May 18, 2026</dd>
+                    <dt>Notification of acceptance</dt>
+                    <dd>February 2, 2026</dd>
 
-                <dt>Workshop format</dt>
-                <dd>Half-day event held in conjunction with <a href="https://infocom2026.ieee-infocom.org/">IEEE INFOCOM
-                        2026</a></dd>
-            </dl>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #6b7280">
-                Dates may be adjusted to follow the final INFOCOM 2026 workshop schedule; please
-                check back for updates.
-            </p>
-        </section>
+                    <dt>Camera-ready manuscript due</dt>
+                    <dd>February 16, 2026</dd>
 
-        <section class="page-section">
-            <h2 class="section-title">Scope</h2>
-            <p>
-                EIN sits at the intersection of agentic computing and next-generation
-                networking. It asks how networks should evolve as embodied intelligence becomes
-                mainstream and agents become ubiquitous &mdash; across edge, cloud, and physical
-                environments.
-            </p>
-            <p>
-                The workshop builds on prior work in distributed and federated learning, but
-                focuses specifically on the networking challenges of real-time control loops,
-                ultra-low-latency coordination, semantic communication, and multi-agent
-                orchestration for embodied systems.
-            </p>
-        </section>
-    </main>
+                    <dt>Workshop Date</dt>
+                    <dd>May 18, 2026</dd>
 
-    <footer class="site-footer">
-        &copy; 2025-2026 EIN 2026 Organizing Committee.
-        <a href="https://github.com/baochunli/infocom26-ein">GitHub source code</a>
-    </footer>
+                    <dt>Workshop format</dt>
+                    <dd>
+                        Half-day event held in conjunction with
+                        <a href="https://infocom2026.ieee-infocom.org/">IEEE INFOCOM 2026</a>
+                    </dd>
+                </dl>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #6b7280">
+                    Dates may be adjusted to follow the final INFOCOM 2026 workshop schedule; please
+                    check back for updates.
+                </p>
+            </section>
 
-    <script defer src="assets/js/main.js"></script>
-</body>
+            <section class="page-section">
+                <h2 class="section-title">Scope</h2>
+                <p>
+                    EIN sits at the intersection of agentic computing and next-generation
+                    networking. It asks how networks should evolve as embodied intelligence becomes
+                    mainstream and agents become ubiquitous &mdash; across edge, cloud, and physical
+                    environments.
+                </p>
+                <p>
+                    The workshop builds on prior work in distributed and federated learning, but
+                    focuses specifically on the networking challenges of real-time control loops,
+                    ultra-low-latency coordination, semantic communication, and multi-agent
+                    orchestration for embodied systems.
+                </p>
+            </section>
+        </main>
 
+        <footer class="site-footer">
+            &copy; 2025-2026 EIN 2026 Organizing Committee.
+            <a href="https://github.com/baochunli/infocom26-ein">GitHub source code</a>
+        </footer>
+
+        <script defer src="assets/js/main.js"></script>
+    </body>
 </html>

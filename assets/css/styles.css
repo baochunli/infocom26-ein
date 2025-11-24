@@ -296,6 +296,14 @@ body {
     margin-bottom: 0;
 }
 
+.page-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+}
+
 .page-section ul {
     margin: 0.6rem 0 0.4rem 1.1rem;
     padding: 0;
