@@ -1,0 +1,9 @@
+[project]
+name = "infocom26-ein"
+version = "0.1.0"
+description = "Website and document generation helpers for the INFOCOM 2026 EIN workshop."
+requires-python = ">=3.11"
+dependencies = [
+    "beautifulsoup4>=4.12,<5",
+]
+

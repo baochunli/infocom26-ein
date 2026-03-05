@@ -538,6 +538,54 @@ a:focus-visible {
     font-size: 0.92rem;
 }
 
+.program-downloads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.25rem;
+}
+
+.program-download-link {
+    display: inline-flex;
+    flex: 1 1 240px;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent), #4f46e5);
+    box-shadow: var(--shadow-soft);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition:
+        transform 160ms ease,
+        box-shadow 160ms ease,
+        opacity 160ms ease;
+}
+
+.program-download-link:hover,
+.program-download-link:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 20px 32px rgba(37, 99, 235, 0.22);
+    opacity: 0.96;
+}
+
+.program-download-link--secondary {
+    background: var(--bg-elevated);
+    border-color: var(--border-subtle);
+    color: var(--text);
+    box-shadow: none;
+}
+
+.program-download-link--secondary:hover,
+.program-download-link--secondary:focus-visible {
+    box-shadow: 0 14px 26px rgba(15, 23, 42, 0.08);
+}
+
 .program-list {
     display: grid;
     gap: 1rem;
