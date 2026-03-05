@@ -515,3 +515,144 @@ a:focus-visible {
 :root:not([data-theme="dark"]) .icon-sun {
     display: none;
 }
+
+/* Program page */
+
+.program-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.program-meta-card {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    background: var(--bg-elevated);
+}
+
+.program-meta-card strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.92rem;
+}
+
+.program-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.program-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem 0 1.1rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.program-item:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.program-time {
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.01em;
+}
+
+.program-card {
+    padding: 1rem 1.1rem;
+    border-radius: 16px;
+    background: linear-gradient(
+        180deg,
+        var(--bg-elevated),
+        color-mix(in srgb, var(--accent-soft) 22%, var(--bg-elevated))
+    );
+    border: 1px solid var(--border-subtle);
+}
+
+.program-card h3,
+.program-card h4 {
+    margin: 0;
+}
+
+.program-card p {
+    margin: 0.55rem 0 0;
+}
+
+.program-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.program-session-note {
+    color: var(--muted);
+}
+
+.program-authors {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.program-details {
+    margin-top: 0.8rem;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 0.8rem;
+}
+
+.program-details summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+}
+
+.program-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.program-chevron {
+    width: 1rem;
+    height: 1rem;
+    color: var(--muted);
+    transition: transform 180ms ease;
+    flex: 0 0 auto;
+}
+
+.program-details[open] .program-chevron {
+    transform: rotate(180deg);
+}
+
+.program-abstract {
+    margin-top: 0.7rem;
+    color: var(--muted);
+}
+
+.program-break .program-card,
+.program-keynote .program-card,
+.program-opening .program-card {
+    background: var(--accent-soft);
+}
+
+@media (max-width: 720px) {
+    .program-item {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .program-time {
+        font-size: 0.95rem;
+    }
+}
